@@ -52,7 +52,7 @@ public class DoctorController {
 
     @GetMapping("/{doctorId}")
     public ResponseEntity<DoctorAppointmentsDto> getAllAppointmentsForDoctor(@PathVariable String doctorId,
-       @RequestParam(name = "pageNo",defaultValue = Constants.DEFAULT_PAGE_Number,required = false) int pageNo,
+       @RequestParam(name = "pageNo",defaultValue = Constants.DEFAULT_PAGE_NUMBER,required = false) int pageNo,
          @RequestParam(name = "pageSize",defaultValue = Constants.DEFAULT_PAGE_SIZE, required =false) int pageSize){
         DoctorAppointmentsDto byId = doctorService.findById(doctorId,pageNo,pageSize);
         return new ResponseEntity<>(byId, HttpStatus.OK);
@@ -60,7 +60,7 @@ public class DoctorController {
 
     @GetMapping("/{doctorId}/{search}")
     public ResponseEntity<DoctorAppointmentsDto> searchDoctor(@PathVariable String doctorId, @PathVariable boolean search,
-      @RequestParam(name = "pageNo",defaultValue = Constants.DEFAULT_PAGE_Number,required = false) int pageNo,
+      @RequestParam(name = "pageNo",defaultValue = Constants.DEFAULT_PAGE_NUMBER,required = false) int pageNo,
       @RequestParam(name = "pageSize",defaultValue = Constants.DEFAULT_PAGE_SIZE, required =false) int pageSize){
         DoctorAppointmentsDto byId = doctorService.findById(doctorId,search,pageNo,pageSize);
         return new ResponseEntity<>(byId, HttpStatus.OK);

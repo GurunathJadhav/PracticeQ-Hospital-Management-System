@@ -9,7 +9,7 @@ import com.practiceq.exception.DoctorNotFoundException;
 import com.practiceq.repository.AdminRepository;
 import com.practiceq.repository.DoctorRepository;
 import com.practiceq.repository.PatientRepository;
-import com.practiceq.service.Impl.JWTService;
+import com.practiceq.service.impl.JWTService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

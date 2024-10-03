@@ -6,7 +6,7 @@ import com.practiceq.payload.DoctorDto;
 import com.practiceq.payload.SignInDto;
 import com.practiceq.service.AdminService;
 import com.practiceq.service.DoctorService;
-import com.practiceq.service.Impl.EmailService;
+import com.practiceq.service.impl.EmailService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

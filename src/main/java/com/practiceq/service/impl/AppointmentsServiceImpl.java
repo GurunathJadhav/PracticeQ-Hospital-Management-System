@@ -1,4 +1,4 @@
-package com.practiceq.service.Impl;
+package com.practiceq.service.impl;
 
 import com.practiceq.entity.Appointments;
 import com.practiceq.entity.Patient;

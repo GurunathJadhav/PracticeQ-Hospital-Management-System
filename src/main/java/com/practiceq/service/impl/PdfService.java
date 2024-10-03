@@ -1,4 +1,4 @@
-package com.practiceq.service.Impl;
+package com.practiceq.service.impl;
 
 import com.itextpdf.text.*;
 import com.itextpdf.text.pdf.PdfPCell;

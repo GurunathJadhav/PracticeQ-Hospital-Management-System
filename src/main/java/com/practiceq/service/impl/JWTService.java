@@ -1,4 +1,4 @@
-package com.practiceq.service.Impl;
+package com.practiceq.service.impl;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;

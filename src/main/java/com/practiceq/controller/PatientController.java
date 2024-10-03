@@ -5,7 +5,7 @@ import com.practiceq.appcontants.Constants;
 import com.practiceq.entity.Patient;
 import com.practiceq.payload.*;
 
-import com.practiceq.service.Impl.EmailService;
+import com.practiceq.service.impl.EmailService;
 import com.practiceq.service.PatientService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -84,7 +84,7 @@ public class PatientController {
 
     @GetMapping("/doctors")
     public ResponseEntity<List<ListOfDoctorsForPatient>> getAllDoctors(
-            @RequestParam(name = "pageNo",defaultValue = Constants.DEFAULT_PAGE_Number) int pageNo,
+            @RequestParam(name = "pageNo",defaultValue = Constants.DEFAULT_PAGE_NUMBER) int pageNo,
             @RequestParam(name = "pageSize",defaultValue = Constants.DEFAULT_PAGE_SIZE) int pageSize
     ){
         List<ListOfDoctorsForPatient> allDoctors = patientService.getAllDoctors(pageNo, pageSize);
@@ -102,7 +102,7 @@ public class PatientController {
 
     @GetMapping("/doctors/{search}")
     public ResponseEntity<List<ListOfDoctorsForPatient>> searchDoctor(@PathVariable String search,
-           @RequestParam(name = "pageNo",defaultValue = Constants.DEFAULT_PAGE_Number,required = false) int pageNo,
+           @RequestParam(name = "pageNo",defaultValue = Constants.DEFAULT_PAGE_NUMBER,required = false) int pageNo,
             @RequestParam(name="pageSize",defaultValue = Constants.DEFAULT_PAGE_SIZE,required = false) int pageSize){
         List<ListOfDoctorsForPatient> listOfDoctorsForPatients = patientService.searchDoctor(search,pageNo,pageSize);
         return new ResponseEntity<>(listOfDoctorsForPatients,HttpStatus.OK);
