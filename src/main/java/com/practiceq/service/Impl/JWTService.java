@@ -30,8 +30,8 @@ public class JWTService {
 
     private Algorithm algorithm;
 
-    private final static String USER_NAME="username";
-    private final static String ROLE="role";
+    private final String USER_NAME="username";
+    private final String ROLE="role";
 
     @PostConstruct
     public void PostConstruct(){
